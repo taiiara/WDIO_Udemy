@@ -11,7 +11,9 @@ describe("webdriveruniversity - contact us page", () => {
     await $(`[name="message"]`).setValue("Whatever");
     await $(`[type="submit"]`).click();
     await $("#contact_reply").waitForDisplayed();
-    await expect($("#contact_reply")).toHaveTextContaining("Thank You for your Message!");
+    await expect($("#contact_reply")).toHaveTextContaining(
+      "Thank You for your Message!"
+    );
   });
   it("invalid submission - dont submit all information", async () => {
     await $(`[type="reset"]`).click();
@@ -20,6 +22,8 @@ describe("webdriveruniversity - contact us page", () => {
     await $(`[name="message"]`).setValue("Whatever");
     await $(`[type="submit"]`).click();
     await $("#contact_reply").waitForDisplayed();
-    await expect($("#contact_reply")).toHaveTextContaining("Thank You for your Message!");
+    await expect($("#contact_reply")).toHaveTextContaining(
+      "Thank You for your Message!"
+    );
   });
 });
