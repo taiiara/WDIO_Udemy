@@ -22,11 +22,11 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        './test/specs/*.js'
     ],
     // Patterns to exclude.
     exclude: [
-        // 'path/to/excluded/files'
+        './test/excluded*.js'
     ],
     //
     // ============
@@ -123,7 +123,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec','junit',['allure', {outputDir: 'allure-results'}]],
+    reporters: ['spec', ['allure', {outputDir: 'allure-results'}]],
 
     
     //
