@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": ".//input[normalize-space(text()) = \"\"first_name\"\"] | .//input[not(.//input[normalize-space(text()) = \"\"first_name\"\"]) and normalize-space() = \"\"first_name\"\"]"
+}
